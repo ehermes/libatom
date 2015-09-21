@@ -14,7 +14,7 @@ fn main() {
     sys = sys + Atom::new(1., 1., 1., 1., 1.,);
     for (i, atomi) in sys.enumerate() {
         for (j, atomj) in sys.enumerate() {
-            if i == j { continue };
+            if i <= j { continue };
             let dr = atomj.position - atomi.position;
             let r = dr.len();
             println!("{}", r);
